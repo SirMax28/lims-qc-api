@@ -1,0 +1,12 @@
+fastapi[standard]
+motor
+pytest
+pydantic-settings
+pytest-asyncio
+pymongo
+aiobcrypt
+python-jose
+sqlmodel 
+sqlalchemy 
+asyncpg 
+alembic

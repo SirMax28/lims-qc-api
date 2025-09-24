@@ -1,0 +1,32 @@
+# Entornos virtuales y caches
+venv
+.env
+.env.*
+core/config.env
+
+# Metadata / VCS
+.git
+.gitignore
+
+# Python cache
+__pycache__
+*.pyc
+*.pyo
+
+# Editor / OS
+.vscode
+.idea
+.DS_Store
+Thumbs.db
+
+# Tests / docs / local
+tests
+docs
+
+# Archivos grandes/locales
+*.sqlite3
+*.log
+
+# Ignorar imágenes de Docker y compose si existen
+docker-compose.yml
+Dockerfile*
