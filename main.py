@@ -7,6 +7,7 @@ from core.database import db
 
 # Importar routers de los endpoints
 from api.endpoints.ok import router as ok_router
+from api.endpoints.hello import router as hello_router
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
@@ -45,6 +46,9 @@ app.add_middleware(
 
 # Routers
 app.include_router(ok_router, prefix=settings.API_PREFIX, tags=["ok"])
+app.include_router(hello_router, prefix=settings.API_PREFIX, tags=["hello"])
 
 # Static files
-app.mount("/static", StaticFiles(directory="assets"), name="static")
+#app.mount("/static", StaticFiles(directory="assets"), name="static")
+
+
