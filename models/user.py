@@ -13,7 +13,7 @@ class UserRole(str, Enum):
 
 # Modelo base con campos comunes para todos
 class UserBase(BaseModel):
-    email: EmailStr  
+    email: EmailStr  # EmailStr valida que sea un email válido
     full_name: str = Field(..., min_length=2, max_length=100)
     role: UserRole = UserRole.VIEWER  # Por defecto es viewer
 
@@ -67,5 +67,6 @@ class Token(BaseModel):
 
 # Datos que guardamos DENTRO del token JWT
 class TokenData(BaseModel):
-    email: Optional[str] = None
+    user_id: Optional[str] = None  # Cambiado de email a user_id
     role: Optional[str] = None
+    
