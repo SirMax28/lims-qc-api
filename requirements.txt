@@ -10,3 +10,5 @@ sqlmodel
 sqlalchemy 
 asyncpg 
 alembic
+python-jose[cryptography]
+python-multipart

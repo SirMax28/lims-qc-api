@@ -7,7 +7,7 @@ from core.config import settings
 from models.user import TokenData
 
 # OAuth2PasswordBearer: maneja el token en el header "Authorization: Bearer <token>"
-oauth2_scheme = OAuth2PasswordBearer(tokenUrl=f"{settings.API_PREFIX}/auth/login")
+oauth2_scheme = OAuth2PasswordBearer(tokenUrl=f"{settings.API_PREFIX}/auth/token")
 
 def create_access_token(data: dict, expires_delta: Optional[timedelta] = None) -> str:
     """
